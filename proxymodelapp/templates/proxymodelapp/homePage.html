@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <body>
+    <hr>
+    <br>
+    {% if request.user.is_authenticated %}
+    The current_user is  : {{request.user.email}}
+    <br>
+    <br>
+    The type of the user is  : {{request.user.type}}
+    {% endif %}
+    <br />
+    <br />
+          <a href="{% url 'proxymodelapp:proxylogin' %}"> Login </a>
+    <br />
+    <hr>
+  </body>
+</html>
